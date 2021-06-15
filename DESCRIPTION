@@ -21,7 +21,8 @@ BugReports: https://github.com/mlverse/sparklyr-image-classification-demo/issues
 Depends:
     R (>= 3.2)
 Imports:
-    sparklyr (>= 1.7.0)
+    sparklyr (>= 1.7.0),
+    rlang (>= 0.1.4)
 Encoding: UTF-8
 SystemRequirements: Spark: 2.4.x
 RoxygenNote: 7.1.1
