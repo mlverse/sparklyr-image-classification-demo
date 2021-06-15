@@ -51,11 +51,11 @@ run_demo <- function(sc) {
   predictions <- model %>%
     ml_transform(image_data$test) %>%
     dplyr::compute()
-  print("Predictions vs. labels:")
+  cat("Predictions vs. labels:\n")
   predictions %>%
     dplyr::select(!!label_col, !!prediction_col) %>%
     print(n = sdf_nrow(predictions))
-  print("Accuracy of predictions:")
+  cat("\nAccuracy of predictions:\n")
   predictions %>%
     ml_multiclass_classification_evaluator(
       label_col = label_col,
