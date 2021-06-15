@@ -4,3 +4,7 @@ spark_dependencies <- function(spark_version, scala_version, ...) {
     repositories = "https://repos.spark-packages.org"
   )
 }
+
+.onLoad <- function(libname, pkgname) {
+  sparklyr::register_extension(pkgname)
+}

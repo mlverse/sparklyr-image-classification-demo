@@ -1,5 +1,5 @@
 Type: Package
-Package: sparklyr.deeper
+Package: sparklyr.deeperer
 Title: Sparklyr Image Classification Demo
 Version: 0.0.1
 Authors@R:
@@ -21,8 +21,11 @@ BugReports: https://github.com/mlverse/sparklyr-image-classification-demo/issues
 Depends:
     R (>= 3.2)
 Imports:
-    sparklyr (>= 1.7.0),
-    rlang (>= 0.1.4)
+    broom,
+    dplyr (>= 0.7.2),
+    magrittr,
+    rlang (>= 0.1.4),
+    sparklyr (>= 1.7.0)
 Encoding: UTF-8
 SystemRequirements: Spark: 2.4.x
 RoxygenNote: 7.1.1

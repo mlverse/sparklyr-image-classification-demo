@@ -6,10 +6,10 @@ trained convolutional neural network for image analysis tasks) to build a
 scalable Spark ML pipeline capable of classifing images of cats and dogs
 accurately and efficiently.
 
-The author of this package wishes to acknowledge the abovementioned `sparklyr`
-image classification demo benefited greatly from the availability of
+The author of this package wishes to acknowledge that the abovementioned `sparklyr`
+image classification demo benefited greatly from the availability of the
 [spark-deep-learning](https://spark-packages.org/package/databricks/spark-deep-learning)
-library, an open-source Scala library developed by [Databricks](https://databricks.com/)
-implementing Inception-V3 and other sophisticated image feature extractors, and
-also, the [dogs-vs-cats](https://www.kaggle.com/c/dogs-vs-cats) image data set
-hosted by [Kaggle](https://www.kaggle.com/).
+library (an open-source Scala library developed by [Databricks](https://databricks.com/)
+implementing Inception-V3 and other sophisticated image feature extractors) and the
+[dogs-vs-cats](https://www.kaggle.com/c/dogs-vs-cats) image data set (hosted by
+[Kaggle](https://www.kaggle.com/)).

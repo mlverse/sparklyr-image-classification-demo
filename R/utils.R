@@ -36,21 +36,11 @@
 #' @export
 copy_images_to_hdfs <- function(dest_dir = NULL) {
   dest_dir <- dest_dir %||% random_string("/dogs-vs-cats")
-  src_dir <- system.file("extdata", package = "sparklyr.deeper")
+  src_dir <- system.file("extdata", package = "sparklyr.deeperer")
 
-  for (sub_dir in c("train", "test")) {
-    dest_sub_dir <- file.path(dest_dir, sub_dir, fsep = "/")
-    for (cmd in list(
-		     list("hdfs", paste("dfs -mkdir -p", dest_sub_dir)),
-                     list("hdfs",
-			  paste("dfs -put", file.path(src_dir, sub_dir), dest_sub_dir)
-	             )
-	        )) {
-      exit_code <- do.call(system2, cmd)
-      if (exit_code != 0) {
-        stop("'", do.call(paste, cmd), "' failed with exit code ", exit_code)
-      }
-    }
+  exit_code <- system2("hdfs", paste("dfs -copyFromLocal", src_dir, dest_dir))
+  if (exit_code != 0) {
+    stop("'", do.call(paste, cmd), "' failed with exit code ", exit_code)
   }
 
   dest_dir
