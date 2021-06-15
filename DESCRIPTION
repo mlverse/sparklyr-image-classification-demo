@@ -13,8 +13,8 @@ Description: This package is a sparklyr extension containing all required MVN
     dependencies and train+test data sets for a Sparklyr image classification
     demo. The goal of this demo is to leverage Apache Spark and Inception V3
     (a pre-trained convolutional neural network for image analysis tasks) to
-    build a scalable ML pipeline capable of classifing images of cats and dogs
-    accurately and efficiently.
+    build a scalable Spark ML pipeline capable of classifing images of cats and
+    dogs accurately and efficiently.
 License: Apache License 2.0 | file LICENSE
 URL: https://github.com/mlverse/sparklyr-image-classification-demo
 BugReports: https://github.com/mlverse/sparklyr-image-classification-demo/issues
